@@ -1,4 +1,4 @@
-# Escuela de metodos 2017
+# Escuela de Métodos 2017
 Scripts de R para taller de análisis de dependencia y autocorrelación espacial
 
 ## Requisitos
