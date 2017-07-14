@@ -1,0 +1,3 @@
+<?xml version="1.0"?>
+<!--<!DOCTYPE metadata SYSTEM "http://www.esri.com/metadata/esriprof80.dtd">-->
+<metadata xml:lang="en"><Esri><MetaID>{52FD6FE2-8273-423D-B1DD-A096D8183AF3}</MetaID><CreaDate>20051129</CreaDate><CreaTime>13422700</CreaTime><SyncOnce>TRUE</SyncOnce><DataProperties><lineage><Process ToolSource="C:\Program Files\ArcGIS\ArcToolbox\Toolboxes\Data Management Tools.tbx\CopyFeatures" Date="20051129" Time="134227">CopyFeatures mpb00 C:\mpb\2002f\Shapefiles\mpb00.shp # 0 0 0</Process></lineage></DataProperties></Esri></metadata>
