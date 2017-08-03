@@ -6,6 +6,7 @@
 # 
 #    http://shiny.rstudio.com/
 #
+# Rodrigo Tapia-McClung (2017)
 
 library(shiny)
 
@@ -14,12 +15,12 @@ shinyUI(fluidPage(
   
   navbarPage("",
     tabPanel("Mapas de SD",
-      titlePanel("Mapas dinámicos en R y shiny"),
+      titlePanel("Mapas din??micos en R y shiny"),
       sidebarLayout(
         sidebarPanel(
           # Select year
           sliderInput("year",
-                      "Año:",
+                      "A??o:",
                       min = 2006,
                       max = 2012,
                       value = 2006,

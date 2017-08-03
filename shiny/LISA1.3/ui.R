@@ -6,6 +6,7 @@
 # 
 #    http://shiny.rstudio.com/
 #
+# Rodrigo Tapia-McClung (2017)
 
 library(shiny)
 library(leaflet)
@@ -14,8 +15,8 @@ library(leaflet)
 shinyUI(fluidPage(
   
   navbarPage("",
-    tabPanel("Vecindades dinámicas",
-      titlePanel("Vecindades dinámicas en Leaflet"),
+    tabPanel("Vecindades din??micas",
+      titlePanel("Vecindades din??micas en Leaflet"),
         #mainPanel(
         #textOutput("clicked"),
         leafletOutput("NBmap")

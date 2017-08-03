@@ -6,6 +6,7 @@
 # 
 #    http://shiny.rstudio.com/
 #
+# Rodrigo Tapia-McClung (2017)
 
 library(shiny)
 library(leaflet)
@@ -17,7 +18,7 @@ shinyUI(fluidPage(
   
   navbarPage("",
     tabPanel("Mapas de SD",
-      titlePanel("Mapas dinámicos en R y shiny"),
+      titlePanel("Mapas din??micos en R y shiny"),
       sidebarLayout(
         sidebarPanel(
           # Select party
@@ -28,7 +29,7 @@ shinyUI(fluidPage(
           ),
           # Select year
           sliderInput("year",
-                     "Año:",
+                     "A??o:",
                      min = 2000,
                      max = 2012,
                      value = 2000,
@@ -56,15 +57,15 @@ shinyUI(fluidPage(
         )
       )
     ),
-    tabPanel("Vecindades dinámicas",
-     titlePanel("Vecindades dinámicas en Leaflet"),
+    tabPanel("Vecindades din??micas",
+     titlePanel("Vecindades din??micas en Leaflet"),
        # mainPanel(
          #textOutput("clicked"),
          leafletOutput("NBmap")
        # )
     ),
-    tabPanel("LISA dinámica",
-      titlePanel("Cálculo de LISA y otras cosas dinámicas"),
+    tabPanel("LISA din??mica",
+      titlePanel("C??lculo de LISA y otras cosas din??micas"),
       sidebarLayout(
         sidebarPanel(
           # Select stuff to work with
@@ -74,7 +75,7 @@ shinyUI(fluidPage(
                        selected = 1), 
           conditionalPanel(
             condition = "input.radio == 3", 
-            sliderInput("knn_slider", 'Selecciona el número de vecinos', 
+            sliderInput("knn_slider", 'Selecciona el n??mero de vecinos', 
                         min = 1, max = 32, value = 4)
           ), 
           conditionalPanel(
@@ -90,7 +91,7 @@ shinyUI(fluidPage(
           ),
           # Select year
           sliderInput("yearLISA",
-                      "Año:",
+                      "A??o:",
                       min = 2000,
                       max = 2012,
                       value = 2000,

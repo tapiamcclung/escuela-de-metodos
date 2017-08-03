@@ -6,6 +6,7 @@
 # 
 #    http://shiny.rstudio.com/
 #
+# Rodrigo Tapia-McClung (2017)
 
 library(shiny)
 library(rgdal)

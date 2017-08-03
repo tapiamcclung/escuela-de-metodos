@@ -6,6 +6,7 @@
 # 
 #    http://shiny.rstudio.com/
 #
+# Rodrigo Tapia-McClung (2017)
 
 library(shiny)
 library(rgdal)
@@ -150,7 +151,7 @@ shinyServer(function(input, output) {
       geom_vline(xintercept = unique(selected()$var_mean), colour = "grey", linetype = "longdash") +
       geom_hline(yintercept = unique(selected()$var_lag_mean), colour = "grey", linetype = "longdash") +
       stat_smooth(method="lm", se=FALSE, colour = "black", size = 0.5) +
-      xlab("\nNúmero de homicidios por estado") +
+      xlab("\nN??mero de homicidios por estado") +
       ylab("\nRetraso espacial de homicidios por estado") +
       theme_bw() +
       ggtitle(paste0("I de Moran: ", unique(selected()$statistic),"\n")) +

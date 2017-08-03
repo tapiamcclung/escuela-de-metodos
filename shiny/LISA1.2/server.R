@@ -6,6 +6,7 @@
 # 
 #    http://shiny.rstudio.com/
 #
+# Rodrigo Tapia-McClung (2017)
 
 library(shiny)
 library(rgdal)
@@ -65,7 +66,7 @@ shinyServer(function(input, output) {
       paste(estado(), "tiene", length(subset.edos), vecinos, length(edos.nbq[[id]]))
     })
     
-    # Juntar los polígonos que nos interesan
+    # Juntar los pol??gonos que nos interesan
     relevantPolys <- rbind(sel.state, subset.edos)
     
     #subset.nb2 <- subset(edos.nbq, (1:length(edos.nbq) %in% as.integer(relevantPolys$CVE_ENT)))
@@ -74,7 +75,7 @@ shinyServer(function(input, output) {
     # Calcular sus centroides
     coords2 <- coordinates(relevantPolys)
     
-    # Graficar el país y vecinos adyacentes del estado seleccionado
+    # Graficar el pa??s y vecinos adyacentes del estado seleccionado
     op <- par(
       oma = c(0,0,0,0),# Sin margen arriba
       mar = c(0,0,0,0)) # Sin margen entre plots

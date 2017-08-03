@@ -6,6 +6,7 @@
 # 
 #    http://shiny.rstudio.com/
 #
+# Rodrigo Tapia-McClung (2017)
 
 library(shiny)
 library(rgdal)
@@ -51,7 +52,7 @@ shinyServer(function(input, output) {
     shades <- auto.shading(data, cutter = sdCuts, n = 6, cols = rev(brewer.pal(6, "RdYlBu")))
     choropleth(edos, data, shades)
     choro.legend(-95, 32, shades, under = "<", over = ">", between = "a", box.lty = "blank", x.intersp = 0.5, y.intersp = 0.75)
-    title(main = paste("Homicidios por estado en", year(),"\n(desviaciones estándar)"), cex.main = 0.75)
+    title(main = paste("Homicidios por estado en", year(),"\n(desviaciones est??ndar)"), cex.main = 0.75)
   })
   
 })

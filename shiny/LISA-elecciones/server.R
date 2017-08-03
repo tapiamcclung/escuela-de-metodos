@@ -6,6 +6,7 @@
 # 
 #    http://shiny.rstudio.com/
 #
+# Rodrigo Tapia-McClung (2017)
 
 library(shiny)
 library(rgdal)
@@ -78,7 +79,7 @@ shinyServer(function(input, output) {
     shades <- auto.shading(data, cutter = sdCuts, n = 6, cols = rev(brewer.pal(6, "RdYlBu")))
     choropleth(distritos, data, shades)
     choro.legend(-95, 32, shades, under = "<", over = ">", between = "a", box.lty = "blank", x.intersp = 0.5, y.intersp = 0.75)
-    title(main = paste("Porcentaje de votos para el", partido(), "por distrito \nelectoral en", year(),"(desviaciones estándar)"), cex.main = 0.75)
+    title(main = paste("Porcentaje de votos para el", partido(), "por distrito \nelectoral en", year(),"(desviaciones est??ndar)"), cex.main = 0.75)
   })
   
   ############################
@@ -118,7 +119,7 @@ shinyServer(function(input, output) {
       paste(distrito(), "tiene", length(subset.distritos), vecinos, length(distritos.nbq[[id]]))
     })
     
-    # Juntar los polígonos que nos interesan
+    # Juntar los pol??gonos que nos interesan
     relevantPolys <- rbind(sel.distrito, subset.distritos)
     
     #subset.nb2 <- subset(distritos.nbq, (1:length(distritos.nbq) %in% as.integer(relevantPolys$CVE_ENT)))
@@ -127,7 +128,7 @@ shinyServer(function(input, output) {
     # Calcular sus centroides
     coords2 <- coordinates(relevantPolys)
     
-    # Graficar el país y vecinos adyacentes del estado seleccionado
+    # Graficar el pa??s y vecinos adyacentes del estado seleccionado
     op <- par(
      oma = c(0,0,0,0),# Sin margen arriba
      mar = c(0,0,0,0)) # Sin margen entre plots

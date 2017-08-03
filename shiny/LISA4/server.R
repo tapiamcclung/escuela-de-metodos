@@ -6,6 +6,7 @@
 # 
 #    http://shiny.rstudio.com/
 #
+# Rodrigo Tapia-McClung (2017)
 
 library(shiny)
 library(rgdal)
@@ -68,7 +69,7 @@ shinyServer(function(input, output) {
     shades <- auto.shading(data, cutter = sdCuts, n = 6, cols = rev(brewer.pal(6, "RdYlBu")))
     choropleth(edos, data, shades)
     choro.legend(-95, 32, shades, under = "<", over = ">", between = "a", box.lty = "blank", x.intersp = 0.5, y.intersp = 0.75)
-    title(main = paste("Homicidios por estado en", year(),"\n(desviaciones estándar)"), cex.main = 0.75)
+    title(main = paste("Homicidios por estado en", year(),"\n(desviaciones est??ndar)"), cex.main = 0.75)
   })
   
   ############################
@@ -101,7 +102,7 @@ shinyServer(function(input, output) {
       paste(estado(), "tiene", length(subset.edos), vecinos, length(edos.nbq[[id]]))
     })
     
-    # Juntar los polígonos que nos interesan
+    # Juntar los pol??gonos que nos interesan
     relevantPolys <- rbind(sel.state, subset.edos)
     
     subset.nb2 <- subset(edos.nbq, (1:length(edos.nbq) %in% as.integer(relevantPolys$CVE_ENT)))
@@ -110,7 +111,7 @@ shinyServer(function(input, output) {
     # Calcular sus centroides
     coords2 <- coordinates(relevantPolys)
     
-    # Graficar el país y vecinos adyacentes del estado seleccionado
+    # Graficar el pa??s y vecinos adyacentes del estado seleccionado
     op <- par(
      oma = c(0,0,0,0),# Sin margen arriba
      mar = c(0,0,0,0)) # Sin margen entre plots
@@ -299,7 +300,7 @@ shinyServer(function(input, output) {
       geom_vline(xintercept = unique(selected()$var_mean), colour = "grey", linetype = "longdash") +
       geom_hline(yintercept = unique(selected()$var_lag_mean), colour = "grey", linetype = "longdash") +
       stat_smooth(method="lm", se=FALSE, colour = "black", size = 0.5) +
-      xlab("\nNúmero de homicidios por estado") +
+      xlab("\nN??mero de homicidios por estado") +
       ylab("\nRetraso espacial de homicidios por estado") +
       theme_bw() +
       ggtitle(paste0("I de Moran: ", unique(selected()$statistic),"\n")) +
