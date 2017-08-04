@@ -386,12 +386,3 @@ shinyServer(function(input, output) {
   })
   
 })
-
-
-#runApp('D:/RTM/My Dropbox/2017/shiny/LISA', display.mode = "showcase")
-
-# http://personal.tcu.edu/kylewalker/spatial-neighbors-in-r.html
-# https://gist.github.com/walkerke/6915b02ac7f0c215bc2c75a687b3d269
-
-# https://rcatlord.shinyapps.io/LISA/
-# https://github.com/rcatlord/shinyapps/blob/master/LISA/LISA.Rmd
