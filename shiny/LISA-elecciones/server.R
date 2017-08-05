@@ -23,7 +23,7 @@ library(dplyr) # load this last so select is not masked by MASS (loaded by RColo
 # Leer shp de distritos
 distritos <- readOGR("../data", "elecciones", verbose = FALSE, stringsAsFactors = FALSE, GDAL1_integer64_policy = T)
 # add ID column
-distritos$id <- seq.int(nrow(edos))
+distritos$id <- seq.int(nrow(distritos))
 
 # Los vecinos de todos los distritos QUEEN
 distritos.nbq <- poly2nb(distritos, queen = T)#, row.names = as.character(edos$ADMIN_NAME))
