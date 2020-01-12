@@ -1,5 +1,5 @@
-# Escuela de Métodos 2017
-Scripts de R para taller de análisis de dependencia y autocorrelación espacial
+# Escuela de Métodos 2020
+Scripts de R para taller de isovistas y visualizaciones en 3D
 
 ## Requisitos
 
